@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:wght@400;700&display=swap');
+:root {
+    --square-default-color: #1d1d1d;
+    --square-default-box-shadow: 0 0 2px #000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 30rem;
+}
+
+.square {
+    background-color: var(--square-default-color);
+    box-shadow: var(--square-default-box-shadow);
+    height: 1rem;
+    width: 1rem;
+    margin: 2px;
+    /* for fade effect - take two seconds for the color to disappear */
+    transition: 2s ease;
+}
+
+.square:hover {
+    transition-duration: 0s;
+}
