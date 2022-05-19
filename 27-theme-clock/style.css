@@ -75,7 +75,8 @@ body {
     width: 3px;
     /* spin from bottom to center */
     transform-origin: bottom center;
-    transition: all 0.5s ease-in
+    /* TODO: TOFIX - when 0 degree, transition invoke turn around...  */
+    /* transition: all 0.5s ease-in-out; */
 }
 
 .needle.hour {
@@ -84,13 +85,13 @@ body {
 }
 
 .needle.second {
-    transform: translate(-50%, -100%) rotate(0deg);
-    height: 100px;
+    transform: translate(-50%, -100%);
+    height: 90px;
 }
 
 .needle.minute {
     transform: translate(-50%, -100%) rotate(0deg);
-    height: 100px;
+    height: 70px;
     background-color: #e74c3c;
 }
 
