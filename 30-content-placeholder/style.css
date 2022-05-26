@@ -33,6 +33,10 @@ img {
     width: 350px;
 }
 
+.card-header {
+    height: 250px;
+}
+
 .card-header img {
     /* make not over card */
     object-fit: cover;
@@ -83,4 +87,29 @@ img {
 
 .author-info small {
     color: var(--light-gray);
+}
+
+.animated-bg {
+    background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 10%, #f6f7f8 20%, #f6f7f8 100%);
+    background-size: 200% 100%;
+    animation: bgPos 1s linear infinite;
+}
+
+.animated-bg-text {
+    border-radius: 50px;
+    /* for zero margin  */
+    display: inline-block;
+    margin: 0;
+    height: 10px;
+    width: 100%;
+}
+
+@keyframes bgPos {
+    /* change x axis position */
+    0% {
+        background-position: 50% 0;
+    }
+    100% {
+        background-position: -150% 0;
+    }
 }
