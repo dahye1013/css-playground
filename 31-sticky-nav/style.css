@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+
+/* [Nav] ******************************************************************* */
+
+.nav {
+    position: fixed;
+    background-color: #222;
+    /* make all the way go cross */
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+
+/* --- when nav is active --- */
+
+.nav.active {
+    background-color: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav.active .container {
+    padding: 1rem 0;
+}
+
+.nav.active a {
+    color: #000;
+}
+
+
+/* --- when nav is selected  ---  */
+
+.nav a.current,
+.nav a:hover {
+    color: tomato;
+    font-weight: bold;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.3rem 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* [Section] ******************************************************************* */
+
+.hero {
+    /* background */
+    background-image: url('https://images.pexels.com/photos/1152359/pexels-photo-1152359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: botton center;
+    height: 100vh;
+    /* content */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: -2;
+}
+
+
+/* [ pseudo selector :: ]
+- like ghost element of style 
+- can make overlay 
+-> in this case, text is behind the overlay
+=> adjust z-index
+*/
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin: -1rem 0 1rem;
+}
+
+.hero p {
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+.content h2,
+.content h3 {
+    font-size: 300%;
+}
+
+.content p {
+    font-size: 2rem;
+}
