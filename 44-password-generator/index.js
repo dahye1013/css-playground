@@ -1,1 +1,1 @@
-console.log('This is boilerplate');
+import randomFunc from './util/randomFunc.js';
